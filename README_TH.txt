@@ -1,24 +1,28 @@
-VEXON WEBSITE — NEW YEAR UPDATE
+VEXON WEBSITE — CLOUDFLARE PAGES SOURCE PACKAGE
 
-ไฟล์ชุดนี้ปรับหน้าแรกให้ใช้ภาพ VEXON New Year โทนเขียวอมฟ้า
-และยังคงหน้าสินค้า ระบบรายละเอียดราคา/ป๊อปอัป และหน้าโปรโมชั่น
-"เตรียมพบโปรโมชั่นใหม่เร็ว ๆ นี้" ตามไฟล์เว็บไซต์เดิม
+This package keeps the approved VEXON New Year hero, original six category tiles,
+product catalog, price-detail popup, navigation, search, menu, and LINE links.
 
-วิธีอัปเดต GitHub:
-1. แตกไฟล์ ZIP นี้ก่อน
-2. เปิดโฟลเดอร์ VEXON_Website_NewYear_Deploy
-3. เข้า GitHub > VEXON2026 > vexon-website (branch main)
-4. กด Add file > Upload files
-5. ลากไฟล์และโฟลเดอร์ทั้งหมดจากในโฟลเดอร์นี้ลงหน้า Upload files
-   ต้องรวม index.html, products.html, promotion.html, ไฟล์ HTML อื่น ๆ
-   และโฟลเดอร์ assets ด้วย
-6. กด Commit changes เพื่อบันทึก
+Files:
+- index.html: homepage and New Year Giveaway hero
+- products.html: product catalog; click a product card to view its price/detail popup
+- promotion.html: promotion page
+- how-to-order.html: ordering instructions
+- contact.html: contact page
+- assets/: images, CSS and JavaScript
 
-ข้อควรระวัง:
-- อย่าลบโฟลเดอร์ assets
-- อย่าอัปโหลดเฉพาะ index.html เพราะภาพและไฟล์ประกอบอยู่ใน assets
-- อย่าเปลี่ยนชื่อ VEXON_NewYear_Hero.png
-- หาก GitHub แจ้งว่าไฟล์ชื่อเดิมมีอยู่ ให้เลือกอัปโหลด/แทนที่ตามปกติ
-- หลัง Commit ให้รอการเผยแพร่เว็บไซต์ แล้วเปิดเว็บและกด Ctrl+F5
+Important hosting note:
+This package is prepared as source files for Cloudflare Pages (connected to the GitHub
+repository). GitHub is used as the code repository, not as the commercial website host.
+Cloudflare Pages Free currently documents up to 500 builds/month, one concurrent build,
+20,000 files/site, and 25 MiB per asset. Static asset requests are documented as free
+and unlimited. Check current Cloudflare terms/limits before launch.
 
-ไฟล์หน้าโปรโมชั่น promotion.html ตั้งข้อความ "เตรียมพบโปรโมชั่นใหม่เร็ว ๆ นี้" ไว้แล้ว
+Before public launch:
+1. Connect this repository to Cloudflare Pages.
+2. Set build command to blank / none for this plain HTML site.
+3. Set build output directory to / (repository root).
+4. Deploy a preview and test every menu, category, product-price popup and LINE link.
+5. Only then share the new Cloudflare Pages URL with customers.
+
+Do not delete the old Netlify site until the new site is tested and customers have moved.
