@@ -13,9 +13,16 @@ a{color:inherit;text-decoration:none}
 .art img{display:block;width:100%;height:auto}
 .hotspot{position:absolute;display:block;background:transparent;border:0;cursor:pointer}
 .hotspot:focus-visible{outline:3px solid #fff;outline-offset:2px;border-radius:12px}
-.line-hotspot{left:68.5%;top:43.1%;width:29.5%;height:9.3%}
-.category-hotspot{top:65.6%;height:28.3%;width:15.7%}
-.c1{left:2%}.c2{left:18.1%}.c3{left:34.4%}.c4{left:50.5%}.c5{left:66.5%}.c6{left:82.7%}
+.hero-nav-hotspot{position:absolute;top:0;height:8.8%;display:block;background:transparent;z-index:4}
+.hero-nav-hotspot.home{left:27.5%;width:10%}
+.hero-nav-hotspot.products{left:39%;width:13%}
+.hero-nav-hotspot.promo{left:53%;width:12%}
+.hero-nav-hotspot.order{left:66%;width:13%}
+.hero-nav-hotspot.contact{left:80%;width:10%}
+.hero-nav-hotspot.search{left:88.5%;width:5.5%}
+.hero-nav-hotspot.menu{left:94.5%;width:5.5%}
+.hero-line-hotspot{position:absolute;left:74.5%;top:75%;width:24%;height:9.5%;display:block;background:transparent;z-index:4}
+.hero-nav-hotspot:focus-visible,.hero-line-hotspot:focus-visible{outline:3px solid #fff;outline-offset:2px;border-radius:10px}
 .catalog{padding:42px clamp(18px,4vw,56px) 58px;background:linear-gradient(180deg,#f5fbfa,#fff)}
 .kicker{letter-spacing:3px;color:#087c78;font-size:12px;font-weight:800}
 h1{font-size:clamp(28px,4vw,42px);margin:10px 0 8px;color:#103c3b}
@@ -82,21 +89,15 @@ footer{padding:24px;text-align:center;background:#075a57;color:#e9f7f5;font-size
 <body>
 <main class="site">
   <section class="art" aria-label="VEXON homepage">
-    <img src="assets/vexon-homepage.jpg" alt="VEXON Research Peptides and Wellness Compounds, October Sale and product categories">
-    <a class="home-hotspot search" href="#" data-open-search aria-label="ค้นหาสินค้า"></a>
-    <a class="home-hotspot menu" href="#" data-open-menu aria-label="เปิดเมนูเพิ่มเติม"></a>
-    <a class="home-hotspot home" href="index.html" aria-label="หน้าแรก"></a>
-    <a class="home-hotspot products" href="products.html" aria-label="สินค้าทั้งหมด"></a>
-    <a class="home-hotspot promo" href="promotion.html" aria-label="โปรโมชั่น"></a>
-    <a class="home-hotspot order" href="how-to-order.html" aria-label="วิธีสั่งซื้อ"></a>
-    <a class="home-hotspot contact" href="contact.html" aria-label="ติดต่อเรา"></a>
-    <a class="hotspot line-hotspot" href="https://line.me/R/ti/p/@118klpno" target="_blank" rel="noopener" aria-label="สั่งซื้อหรือสอบถามผ่าน LINE OA"></a>
-    <a class="hotspot category-hotspot c1" href="#peptide" aria-label="Peptide"></a>
-    <a class="hotspot category-hotspot c2" href="#skin" aria-label="Skin and Anti-Aging"></a>
-    <a class="hotspot category-hotspot c3" href="#growth" aria-label="Growth and Performance"></a>
-    <a class="hotspot category-hotspot c4" href="#body" aria-label="Body Composition"></a>
-    <a class="hotspot category-hotspot c5" href="#wellness" aria-label="Wellness and Recovery"></a>
-    <a class="hotspot category-hotspot c6" href="#vitamin" aria-label="Vitamin and Support"></a>
+    <img src="assets/VEXON_NewYear_Hero.png" alt="VEXON Research Peptides and Wellness Compounds with New Year Giveaway theme">
+    <a class="hero-nav-hotspot home" href="index.html" aria-label="หน้าแรก"></a>
+    <a class="hero-nav-hotspot products" href="products.html" aria-label="สินค้าทั้งหมด"></a>
+    <a class="hero-nav-hotspot promo" href="promotion.html" aria-label="โปรโมชั่น"></a>
+    <a class="hero-nav-hotspot order" href="how-to-order.html" aria-label="วิธีสั่งซื้อ"></a>
+    <a class="hero-nav-hotspot contact" href="contact.html" aria-label="ติดต่อเรา"></a>
+    <a class="hero-nav-hotspot search" href="#" data-open-search aria-label="ค้นหาสินค้า"></a>
+    <a class="hero-nav-hotspot menu" href="#" data-open-menu aria-label="เปิดเมนูเพิ่มเติม"></a>
+    <a class="hero-line-hotspot" href="https://line.me/R/ti/p/@118klpno" target="_blank" rel="noopener" aria-label="สั่งซื้อหรือสอบถามผ่าน LINE OA"></a>
   </section>
 
   <section class="catalog" id="products">
