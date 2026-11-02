@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#006b68">
+<title>VEXON | Peptide Research Solution</title>
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f5fbfa;color:#123638;font-family:Arial,"Noto Sans Thai",sans-serif}
+a{color:inherit;text-decoration:none}
+.site{max-width:1440px;margin:auto;background:#fff;box-shadow:0 8px 40px #003d3b18}
+.art{position:relative;width:100%;line-height:0}
+.art img{display:block;width:100%;height:auto}
+.hotspot{position:absolute;display:block;background:transparent;border:0;cursor:pointer}
+.hotspot:focus-visible{outline:3px solid #fff;outline-offset:2px;border-radius:12px}
+.line-hotspot{left:68.5%;top:43.1%;width:29.5%;height:9.3%}
+.category-hotspot{top:65.6%;height:28.3%;width:15.7%}
+.c1{left:2%}.c2{left:18.1%}.c3{left:34.4%}.c4{left:50.5%}.c5{left:66.5%}.c6{left:82.7%}
+.catalog{padding:42px clamp(18px,4vw,56px) 58px;background:linear-gradient(180deg,#f5fbfa,#fff)}
+.kicker{letter-spacing:3px;color:#087c78;font-size:12px;font-weight:800}
+h1{font-size:clamp(28px,4vw,42px);margin:10px 0 8px;color:#103c3b}
+.lead{margin:0 0 28px;color:#54706e}
+.group{margin:28px 0 0;padding:22px;border:1px solid #d9eae7;border-radius:18px;background:#fff;box-shadow:0 8px 24px #064d4810}
+.group h2{margin:0 0 16px;font-size:22px;color:#075e5b}
+.items{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.item{padding:14px 16px;border-radius:12px;background:#eef8f6;border:1px solid #dcefeb;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.item strong{font-size:15px}.item span{font-size:13px;color:#087c78;white-space:nowrap}
+.note{margin:28px 0 0;color:#607a77;font-size:13px;line-height:1.7}
+footer{padding:24px;text-align:center;background:#075a57;color:#e9f7f5;font-size:13px;line-height:1.7}
+@media(max-width:700px){.items{grid-template-columns:1fr 1fr}.catalog{padding-top:28px}.group{padding:16px}.item{padding:12px 10px;display:block}.item span{display:block;margin-top:5px}}
+@media(max-width:420px){.items{grid-template-columns:1fr}}
+
+/* Product bottle catalog */
+.group{border:0;border-radius:0;background:transparent;box-shadow:none;padding:22px 0;border-top:1px solid #dcebe8}
+.group h2{font-size:23px;margin:0 0 18px;color:#075e5b}
+.product-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.product-card{display:flex;flex-direction:column;align-items:flex-start;min-width:0;padding:0 0 16px;border:1px solid #e1ecea;border-radius:15px;overflow:hidden;background:#fff;box-shadow:0 5px 18px #064d480c;transition:transform .18s,box-shadow .18s}
+.product-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px #064d481a}
+.product-image{width:100%;height:190px;background:linear-gradient(145deg,#f1f8f7,#e6f2f0);display:flex;align-items:center;justify-content:center;padding:10px 16px}
+.product-image img{height:100%;width:100%;object-fit:contain;mix-blend-mode:multiply}
+.product-card strong{font-size:16px;color:#173d3b;padding:13px 14px 0;line-height:1.4}
+.product-card span{font-size:13px;color:#64817e;padding:5px 14px 0}
+.product-card em{font-style:normal;font-size:13px;font-weight:700;color:#087b74;padding:12px 14px 0}
+@media(max-width:850px){.product-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.product-image{height:165px}}
+@media(max-width:560px){.product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.product-image{height:145px}.product-card strong{font-size:14px;padding-left:10px;padding-right:10px}.product-card span,.product-card em{padding-left:10px;padding-right:10px}}
+
+
+.inner-header{background:linear-gradient(110deg,#005e5b,#087d78);color:#fff;padding:18px clamp(18px,4vw,48px);display:flex;align-items:center;justify-content:space-between;gap:22px;position:sticky;top:0;z-index:10;box-shadow:0 3px 14px #003d3b22}
+.brand{font-size:26px;font-weight:900;letter-spacing:1px;line-height:1}.brand small{display:block;font-size:10px;font-weight:500;letter-spacing:.3px;margin-top:4px}
+.navlinks{display:flex;align-items:center;gap:clamp(12px,2.2vw,30px);flex-wrap:wrap;justify-content:flex-end}
+.navlinks a{font-size:15px;font-weight:700;color:#fff;padding:7px 0;border-bottom:2px solid transparent}
+.navlinks a:hover,.navlinks a.active{border-color:#a6e8df}
+.page-hero{background:linear-gradient(135deg,#e8f6f3,#fff);padding:42px clamp(20px,5vw,64px);border-bottom:1px solid #d9eae7}
+.page-hero .kicker{letter-spacing:3px;color:#087c78;font-size:12px;font-weight:800}
+.page-hero h1{font-size:clamp(30px,4vw,44px);margin:10px 0;color:#103c3b}
+.page-hero p{margin:0;color:#54706e;line-height:1.7}
+.content{padding:28px clamp(18px,4vw,56px) 60px}
+.contact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.contact-card{display:flex;flex-direction:column;gap:8px;padding:22px;border:1px solid #dcebe8;border-radius:16px;background:#fff;box-shadow:0 6px 20px #064d480c}
+.contact-card strong{font-size:18px;color:#075e5b}
+.contact-card p{margin:0;color:#607a77;line-height:1.65;overflow-wrap:anywhere}
+.contact-card a{color:#087b74;font-weight:800;overflow-wrap:anywhere}
+.steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;counter-reset:step}
+.step{padding:20px;border:1px solid #dcebe8;border-radius:15px;background:#fff}
+.step b{display:block;color:#075e5b;font-size:18px;margin-bottom:7px}
+.step p{margin:0;color:#607a77;line-height:1.7}
+.price-list{max-width:760px;margin:24px auto;background:white;border:1px solid #dcebe8;border-radius:18px;padding:24px;box-shadow:0 8px 24px #064d4810}
+.price-row{display:flex;justify-content:space-between;gap:16px;padding:14px 10px;border-bottom:1px solid #e5efed;font-weight:800;color:#155b57}
+.price-row:last-of-type{border-bottom:0}
+.price-row strong{color:#087c78}
+.price-note{margin-top:18px;padding:16px;border-radius:12px;background:#eef8f6;color:#245e5a;line-height:1.8}
+.home-hotspot{position:absolute;top:.4%;height:5.4%;display:block;background:transparent}
+.home-hotspot.home{left:27%;width:9%}
+.home-hotspot.products{left:37%;width:14%}
+.home-hotspot.promo{left:52%;width:12%}
+.home-hotspot.order{left:64%;width:14%}
+.home-hotspot.contact{left:78%;width:13%}
+@media(max-width:700px){.inner-header{align-items:flex-start;flex-direction:column}.navlinks{justify-content:flex-start;gap:12px}.navlinks a{font-size:13px}.contact-grid,.steps{grid-template-columns:1fr}.price-list{padding:16px}.price-row{padding:12px 4px}}
+
+</style>
+</head>
+<body>
+<main class="site">
+  <section class="art" aria-label="VEXON homepage">
+    <img src="assets/vexon-homepage.jpg" alt="VEXON Research Peptides and Wellness Compounds, October Sale and product categories">
+    <a class="home-hotspot search" href="#" data-open-search aria-label="ค้นหาสินค้า"></a>
+    <a class="home-hotspot menu" href="#" data-open-menu aria-label="เปิดเมนูเพิ่มเติม"></a>
+    <a class="home-hotspot home" href="index.html" aria-label="หน้าแรก"></a>
+    <a class="home-hotspot products" href="products.html" aria-label="สินค้าทั้งหมด"></a>
+    <a class="home-hotspot promo" href="promotion.html" aria-label="โปรโมชั่น"></a>
+    <a class="home-hotspot order" href="how-to-order.html" aria-label="วิธีสั่งซื้อ"></a>
+    <a class="home-hotspot contact" href="contact.html" aria-label="ติดต่อเรา"></a>
+    <a class="hotspot line-hotspot" href="https://line.me/R/ti/p/@118klpno" target="_blank" rel="noopener" aria-label="สั่งซื้อหรือสอบถามผ่าน LINE OA"></a>
+    <a class="hotspot category-hotspot c1" href="#peptide" aria-label="Peptide"></a>
+    <a class="hotspot category-hotspot c2" href="#skin" aria-label="Skin and Anti-Aging"></a>
+    <a class="hotspot category-hotspot c3" href="#growth" aria-label="Growth and Performance"></a>
+    <a class="hotspot category-hotspot c4" href="#body" aria-label="Body Composition"></a>
+    <a class="hotspot category-hotspot c5" href="#wellness" aria-label="Wellness and Recovery"></a>
+    <a class="hotspot category-hotspot c6" href="#vitamin" aria-label="Vitamin and Support"></a>
+  </section>
+
+  <section class="catalog" id="products">
+    <div class="kicker">VEXON PRODUCT LINE</div>
+    <h1>Product Categories</h1>
+    <p class="lead">รายการสินค้า VEXON · เลือกสินค้าเพื่อสอบถามรายละเอียดกับแอดมิน</p>
+
+    <section class="group" id="peptide"><h2>Peptide</h2><div class="product-grid">
+      <a class="product-card" href="https://line.me/R/ti/p/@118klpno" target="_blank" rel="noopener"><div class="product-image"><img src="assets/vexon-vial-blank.jpg" alt="VEXON vial"></div><strong>Tirzepatide TR10</strong><span>10 mg</span><em>สอบถามแอดมิน ↗</em></a>
+      <a class="product-card" href="https://line.me/R/ti/p/@118klpno" target="_blank" rel="noopener"><div class="product-image"><img src="assets/vexon-vial-blank.jpg" alt="VEXON vial"></div><strong>Tirzepatide TR20</strong><span>20 mg</span><em>สอบถามแอดมิน ↗</em></a>
+      <a class="product-card" href="https://line.me/R/ti/p/@118klpno" target="_blank" rel="noopener"><div class="product-image"><img src="assets/vexon-vial-blank.jpg" alt="VEXON vial"></div><strong>Tirzepatide TR30</strong><span>30 mg</span><em>สอบถามแอดมิน ↗</em></a>
+      <a class="product-card" href="https://line.me/R/ti/p/@118klpno" target="_blank" rel="noopener"><div class="product-image"><img src="assets/vexon-vial-blank.jpg" alt="VEXON vial"></div><strong>Retatrutide RT10</strong><span>10 mg</span><em>สอบถามแอดมิน ↗</em></a>
+      <a class="product-card" href="https://line.me/R/ti/p/@118klpno" target="_blank" rel="noopener"><div class="product-image"><img src="assets/vexon-vial-blank.jpg" alt="VEXON vial"></div><strong>Retatrutide RT20</strong><span>20 mg</span><em>สอบถามแอดมิน ↗</em></a>
+      <a class="product-card" href="https://line.me/R/ti/p/@118klpno" target="_blank" rel="noopener"><div class="product-image"><img src="assets/vexon-vial-blank.jpg" alt="VEXON vial"></div><strong>MOTS-c</strong><span>Research product</span><em>สอบถามแอดมิน ↗</em></a>
+      <a class="product-card" href="https://line.me/R/ti/p/@118klpno" target="_blank" rel="noopener"><div class="product-image"><img src="assets/vexon-vial-blank.jpg" alt="VEXON vial"></div><strong>5-AMINO-1MQ</strong><span>Research product</span><em>สอบถามแอดมิน ↗</em></a>
+      <a class="product-card" href="https://line.me/R/ti/p/@118klpno" target="_blank" rel="noopener"><div class="product-image"><img src="assets/vexon-vial-blank.jpg" alt="VEXON vial"></div><strong>SS-31</strong><span>Research product</span><em>สอบถามแอดมิน ↗</em></a>
+      <a class="product-card" href="https://line.me/R/ti/p/@118klpno" target="_blank" rel="noopener"><div class="product-image"><img src="assets/vexon-vial-blank.jpg" alt="VEXON vial"></div><strong>PT-141</strong><span>Research product</span><em>สอบถามแอดมิน ↗</em></a>
+    </div></section>
+
+    <section class="group" id="skin"><h2>Skin &amp; Anti-Aging</h2><div class="product-grid">
+      <a class="product-card" href="https://line.me/R/ti/p/@118klpno" target="_blank" rel="noopener"><div class="product-image"><img src="assets/vexon-vial-blank.jpg" alt="VEXON vial"></div><strong>GHK-Cu</strong><span>50 mg</span><em>สอบถามแอดมิน ↗</em></a>
+      <a class="product-card" href="https://line.me/R/ti/p/@118klpno" target="_blank" rel="noopener"><div class="product-image"><img src="assets/vexon-vial-blank.jpg" alt="VEXON vial"></div><strong>Gluta</strong><span>สอบถามรายละเอียด</span><em>สอบถามแอดมิน ↗</em></a>
+      <a class="product-card" href="https://line.me/R/ti/p/@118klpno" target="_blank" rel="noopener"><div class="product-image"><img src="assets/vexon-vial-blank.jpg" alt="VEXON vial"></div><strong>Luthione</strong><span>1,200 mg</span><em>สอบถามแอดมิน ↗</em></a>
+      <a class="product-card" href="https://line.me/R/ti/p/@118klpno" target="_blank" rel="noopener"><div class="product-image"><img src="assets/vexon-vial-blank.jpg" alt="VEXON vial"></div><strong>MA10</strong><span>สอบถามรายละเอียด</span><em>สอบถามแอดมิน ↗</em></a>
+    </div></section>
+
+    <section class="group" id="growth"><h2>Growth &amp; Performance</h2><div class="product-grid">
+      <a class="product-card" href="https://line.me/R/ti/p/@118klpno" target="_blank" rel="noopener"><div class="product-image"><img src="assets/vexon-vial-blank.jpg" alt="VEXON vial"></div><strong>HGH</strong><span>10 IU</span><em>สอบถามแอดมิน ↗</em></a>
+      <a class="product-card" href="https://line.me/R/ti/p/@118klpno" target="_blank" rel="noopener"><div class="product-image"><img src="assets/vexon-vial-blank.jpg" alt="VEXON vial"></div><strong>CJC With DAC</strong><span>สอบถามรายละเอียด</span><em>สอบถามแอดมิน ↗</em></a>
+      <a class="product-card" href="https://line.me/R/ti/p/@118klpno" target="_blank" rel="noopener"><div class="product-image"><img src="assets/vexon-vial-blank.jpg" alt="VEXON vial"></div><strong>Tesamorelin</strong><span>10 mg</span><em>สอบถามแอดมิน ↗</em></a>
+      <a class="product-card" href="https://line.me/R/ti/p/@118klpno" target="_blank" rel="noopener"><div class="product-image"><img src="assets/vexon-vial-blank.jpg" alt="VEXON vial"></div><strong>TESA + IPA</strong><span>สอบถามรายละเอียด</span><em>สอบถามแอดมิน ↗</em></a>
+    </div></section>
+
+    <section class="group" id="body"><h2>Body Composition</h2><div class="product-grid">
+      <a class="product-card" href="https://line.me/R/ti/p/@118klpno" target="_blank" rel="noopener"><div class="product-image"><img src="assets/vexon-vial-blank.jpg" alt="VEXON vial"></div><strong>Lipo-B</strong><span>สอบถามรายละเอียด</span><em>สอบถามแอดมิน ↗</em></a>
+      <a class="product-card" href="https://line.me/R/ti/p/@118klpno" target="_blank" rel="noopener"><div class="product-image"><img src="assets/vexon-vial-blank.jpg" alt="VEXON vial"></div><strong>Lipo-C</strong><span>สอบถามรายละเอียด</span><em>สอบถามแอดมิน ↗</em></a>
+    </div></section>
+
+    <section class="group" id="wellness"><h2>Wellness &amp; Recovery</h2><div class="product-grid">
+      <a class="product-card" href="https://line.me/R/ti/p/@118klpno" target="_blank" rel="noopener"><div class="product-image"><img src="assets/vexon-vial-blank.jpg" alt="VEXON vial"></div><strong>Klow 80</strong><span>สอบถามรายละเอียด</span><em>สอบถามแอดมิน ↗</em></a>
+      <a class="product-card" href="https://line.me/R/ti/p/@118klpno" target="_blank" rel="noopener"><div class="product-image"><img src="assets/vexon-vial-blank.jpg" alt="VEXON vial"></div><strong>HHB</strong><span>สอบถามรายละเอียด</span><em>สอบถามแอดมิน ↗</em></a>
+      <a class="product-card" href="https://line.me/R/ti/p/@118klpno" target="_blank" rel="noopener"><div class="product-image"><img src="assets/vexon-vial-blank.jpg" alt="VEXON vial"></div><strong>NAD+ Buffered</strong><span>100 mg</span><em>สอบถามแอดมิน ↗</em></a>
+    </div></section>
+
+    <section class="group" id="vitamin"><h2>Vitamin &amp; Support</h2><div class="product-grid">
+      <a class="product-card" href="https://line.me/R/ti/p/@118klpno" target="_blank" rel="noopener"><div class="product-image"><img src="assets/vexon-vial-blank.jpg" alt="VEXON vial"></div><strong>B12</strong><span>สอบถามรายละเอียด</span><em>สอบถามแอดมิน ↗</em></a>
+      <a class="product-card" href="https://line.me/R/ti/p/@118klpno" target="_blank" rel="noopener"><div class="product-image"><img src="assets/vexon-vial-blank.jpg" alt="VEXON vial"></div><strong>BAC Water</strong><span>3 ml</span><em>สอบถามแอดมิน ↗</em></a>
+      <a class="product-card" href="https://line.me/R/ti/p/@118klpno" target="_blank" rel="noopener"><div class="product-image"><img src="assets/vexon-vial-blank.jpg" alt="VEXON vial"></div><strong>GTT1500</strong><span>สอบถามรายละเอียด</span><em>สอบถามแอดมิน ↗</em></a>
+    </div></section>
+    <p class="note">แตะที่รูปหรือชื่อสินค้าเพื่อสอบถามข้อมูลกับแอดมินผ่าน LINE OA</p>
+  </section>
+  <footer>VEXON · Peptide Research Solution<br>For Research Use Only · Not for Human Use</footer>
+</main>
+<div class="overlay" id="siteDrawer" aria-hidden="true"><aside class="drawer" role="dialog" aria-label="เมนู VEXON">
+<div class="drawer-top"><a class="drawer-brand" href="index.html">VEXON<small>Peptide Research Solution</small></a><button class="close-btn" type="button" data-close-menu aria-label="ปิดเมนู">×</button></div>
+<div class="drawer-intro"><b>VEXON · Research Peptides</b><br>รวมเมนูสินค้า ข่าวสาร และช่องทางติดต่อไว้ในที่เดียว</div>
+<nav class="drawer-links">
+<a href="index.html">หน้าแรก <span>›</span></a>
+<a href="products.html">สินค้าทั้งหมด <span>›</span></a>
+<a href="promotion.html">โปรโมชั่น <span>›</span></a>
+<a href="how-to-order.html">วิธีสั่งซื้อ / วิธีสอบถาม <span>›</span></a>
+<a href="contact.html">ติดต่อเรา <span>›</span></a>
+</nav>
+<div class="drawer-subtitle">COMMUNITY & SOCIAL</div>
+<div class="drawer-social">
+<a href="https://line.me/R/ti/p/@118klpno" target="_blank" rel="noopener">LINE OA · @118klpno ↗</a>
+<a href="https://line.me/ti/g2/EQvxTqRmbrtfZODc3sQ9YKqHbjdFF2RwX-sErg?utm_source=invitation&utm_medium=link_copy&utm_campaign=default" target="_blank" rel="noopener">LINE OpenChat · VEXON ↗</a>
+<a href="https://t.me/+ILcz5tNDmshjYmRl" target="_blank" rel="noopener">Telegram ↗</a>
+<a href="https://www.tiktok.com/@prime_chain?_r=1&amp;_t=ZS-9B3nGgGfkDy" target="_blank" rel="noopener">TikTok · @prime_chain ↗</a>
+</div></aside></div>
+<div class="search-panel" id="siteSearch" aria-hidden="true"><div class="search-box">
+<button class="search-close" type="button" data-close-search aria-label="ปิดค้นหา">×</button>
+<h2>ค้นหาสินค้า VEXON</h2><p>พิมพ์ชื่อสินค้า หรือรหัสสินค้า เช่น TR10, Retatrutide, GHK-Cu</p>
+<form class="search-form" id="searchForm"><input id="searchInput" type="search" placeholder="ค้นหาชื่อหรือรหัสสินค้า..." autocomplete="off"><button type="submit">ค้นหา</button></form>
+</div></div>
+<script src="assets/site.js"></script></body>
+</html>
